@@ -1,0 +1,14 @@
+define flow self check input
+  $allowed = execute self_check_input
+
+  if not $allowed
+    bot refuse to respond
+    stop
+
+define flow
+  user ask about people place history theory
+  $hallucination_warning = True
+  bot respond about people place history theory
+
+define bot inform answer prone to hallucination
+  "The previous answer is prone to hallucination and may not be accurate."

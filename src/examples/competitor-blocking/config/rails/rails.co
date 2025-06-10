@@ -1,0 +1,6 @@
+define flow
+  user ask about competitors
+  bot refuse to respond about competitors
+
+define bot refuse to respond about competitors
+  "I'm sorry, but I am not allowed to discuss competitors."

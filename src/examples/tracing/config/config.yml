@@ -1,0 +1,45 @@
+models:
+  - type: main
+    engine: openai
+    model: gpt-3.5-turbo
+    parameters:
+      temperature: 0.0      
+  - type: content_safety
+    engine: nim
+    model: nvidia/llama-3.1-nemoguard-8b-content-safety
+
+rails:
+  input:
+    flows:
+      - mask sensitive data on input     # Presidio (no LLM)
+      - injection detection              # regex / YARA (no LLM)
+      - content safety check input $model=content_safety
+      - self check input
+      - jailbreak detection heuristics
+  output:
+    flows:
+      - mask sensitive data on output
+      - content safety check output $model=content_safety
+      - self check hallucination
+  config:
+    sensitive_data_detection:            # Presidio tuning
+      input:
+        entities: [EMAIL_ADDRESS, PERSON]
+      output:
+        entities: [PERSON]
+    jailbreak_detection:
+      #server_endpoint: "http://0.0.0.0:1337/heuristics"
+      length_per_perplexity_threshold: 89.79
+      prefix_suffix_perplexity_threshold: 1845.65
+
+tracing:
+  enabled: true
+  adapters:
+    - name: OpenTelemetry
+      service_name: "nemo_guardrails_service"
+      exporter: "console"  # Options: "console", "zipkin", etc.
+      resource_attributes:
+        env: "production"
+    - name: FileSystem
+      filepath: './traces/traces.jsonl'
+

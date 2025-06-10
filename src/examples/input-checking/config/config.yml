@@ -9,7 +9,7 @@ models:
 rails:
   input:
     flows:
-      - mask sensitive data on input     # Presidio (no LLM)
+      - show sensitive data on input     # Presidio (no LLM)
       - injection detection              # regex / YARA (no LLM)
   output:
     flows:
