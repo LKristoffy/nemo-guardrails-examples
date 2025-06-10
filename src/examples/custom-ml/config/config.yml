@@ -7,3 +7,6 @@ rails:
   input:
     flows:
       - validate tabular data input
+
+
+colang: 2.0
