@@ -3,23 +3,30 @@ models:
     engine: openai
     model: gpt-3.5-turbo
     parameters:
-      temperature: 0.0      
-  - type: content_safety
-    engine: nim
-    model: nvidia/llama-3.1-nemoguard-8b-content-safety
+      temperature: 0.0    
+
+  # Using Nvidia API  
+  # - type: content_safety
+  #   engine: openai
+  #   model: nvidia/llama-3.1-nemoguard-8b-content-safety
+  # Using local LLM with content safety model, must start the server first with something like ollama
+  - type: llama_guard
+    engine: openai
+    parameters:
+      openai_api_base: "http://localhost:11434/v1"
+      model_name: "llama-guard3:8b"   
 
 rails:
   input:
     flows:
       - mask sensitive data on input     # Presidio (no LLM)
-      - injection detection              # regex / YARA (no LLM)
-      - content safety check input $model=content_safety
+      # - injection detection # If no end-point given, it will run on-device
+      # - content safety check input $model=content_safety
+      - content safety check input $model=llama_guard
       - self check input
       - jailbreak detection heuristics
   output:
     flows:
-      - mask sensitive data on output
-      - content safety check output $model=content_safety
       - self check hallucination
   config:
     sensitive_data_detection:            # Presidio tuning
@@ -37,7 +44,7 @@ tracing:
   adapters:
     - name: OpenTelemetry
       service_name: "nemo_guardrails_service"
-      exporter: "console"  # Options: "console", "zipkin", etc.
+      exporter: "zipkin"  # Options: "console", "zipkin", etc.
       resource_attributes:
         env: "production"
     - name: FileSystem

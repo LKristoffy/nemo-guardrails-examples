@@ -15,7 +15,14 @@ dependencies = [
 dev = [
     "ipykernel>=6.29.5",
 ]
+jailbreak-heuristic = [
+    "torch>=2.7.1",
+    "transformers>=4.52.4",
+]
 tabular-tests = [
     "fairlearn>=0.12.0",
+]
+tracing = [
+    "opentelemetry-exporter-zipkin>=1.34.1",
 ]
 

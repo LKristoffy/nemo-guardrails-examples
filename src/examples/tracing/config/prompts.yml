@@ -1,95 +1,51 @@
 # These are the default prompts released by Meta, except for policy O7, which was added to address direct insults.
 prompts:
 
-  - task: content_safety_check_input $model=content_safety
-    content: |
-      Task: Check if there is unsafe content in the user or agent messages in the below conversation in accordance with our safety policy with the below categories. Provide a 'safe' or 'unsafe' rating for both the user message and the agent response. If there is unsafe content, please also provide a list of violated categories according to our safety policy below.
+  # - task: content_safety_check_input $model=content_safety
+  #   content: |
+  #     Task: Check if there is unsafe content in the user or agent messages in the below conversation in accordance with our safety policy with the below categories. Provide a 'safe' or 'unsafe' rating for both the user message and the agent response. If there is unsafe content, please also provide a list of violated categories according to our safety policy below.
 
-      <BEGIN UNSAFE CONTENT CATEGORIES>
-      S1: Violence.
-      S2: Sexual.
-      S3: Criminal Planning/Confessions.
-      S4: Guns and Illegal Weapons.
-      S5: Controlled/Regulated Substances.
-      S6: Suicide and Self Harm.
-      S7: Sexual (minor).
-      S8: Hate/Identity Hate.
-      S9: PII/Privacy.
-      S10: Harassment.
-      S11: Threat.
-      S12: Profanity.
-      S13: Needs Caution.
-      S14: Other.
-      S15: Manipulation.
-      S16: Fraud/Deception.
-      S17: Malware.
-      S18: High Risk Gov Decision Making.
-      S19: Political/Misinformation/Conspiracy.
-      S20: Copyright/Trademark/Plagiarism.
-      S21: Unauthorized Advice.
-      S22: Illegal Activity.
-      S23: Immoral/Unethical.
-      <END UNSAFE CONTENT CATEGORIES>
+  #     <BEGIN UNSAFE CONTENT CATEGORIES>
+  #     S1: Violence.
+  #     S2: Sexual.
+  #     S3: Criminal Planning/Confessions.
+  #     S4: Guns and Illegal Weapons.
+  #     S5: Controlled/Regulated Substances.
+  #     S6: Suicide and Self Harm.
+  #     S7: Sexual (minor).
+  #     S8: Hate/Identity Hate.
+  #     S9: PII/Privacy.
+  #     S10: Harassment.
+  #     S11: Threat.
+  #     S12: Profanity.
+  #     S13: Needs Caution.
+  #     S14: Other.
+  #     S15: Manipulation.
+  #     S16: Fraud/Deception.
+  #     S17: Malware.
+  #     S18: High Risk Gov Decision Making.
+  #     S19: Political/Misinformation/Conspiracy.
+  #     S20: Copyright/Trademark/Plagiarism.
+  #     S21: Unauthorized Advice.
+  #     S22: Illegal Activity.
+  #     S23: Immoral/Unethical.
+  #     <END UNSAFE CONTENT CATEGORIES>
 
-      <BEGIN CONVERSATION>
+  #     <BEGIN CONVERSATION>
 
-      user: {{ user_input }}
+  #     user: {{ user_input }}
 
-      <END CONVERSATION>
+  #     <END CONVERSATION>
 
-      Provide your safety assessment for the above conversation in the below output JSON format:
-      {"User Safety": safe or unsafe rating for the user message, "Response Safety": safe or unsafe rating for the agent response. Omit if no agent response present. "Safety Categories": a comma-separated list of applicable safety categories from the provided taxonomy. Omit if all safe.}
+  #     Provide your safety assessment for the above conversation in the below output JSON format:
+  #     {"User Safety": safe or unsafe rating for the user message, "Response Safety": safe or unsafe rating for the agent response. Omit if no agent response present. "Safety Categories": a comma-separated list of applicable safety categories from the provided taxonomy. Omit if all safe.}
 
-      Do not include anything other than the output JSON in your response.
-      Output JSON:
-    output_parser: nemoguard_parse_prompt_safety
-    max_tokens: 50
+  #     Do not include anything other than the output JSON in your response.
+  #     Output JSON:
+  #   output_parser: nemoguard_parse_prompt_safety
+  #   max_tokens: 50
 
-  - task: content_safety_check_output $model=content_safety
-    content: |
-      Task: Check if there is unsafe content in the user or agent messages in the below conversation in accordance with our safety policy with the below categories. Provide a 'safe' or 'unsafe' rating for both the user message and the agent response. If there is unsafe content, please also provide a list of violated categories according to our safety policy below.
 
-      <BEGIN UNSAFE CONTENT CATEGORIES>
-      S1: Violence.
-      S2: Sexual.
-      S3: Criminal Planning/Confessions.
-      S4: Guns and Illegal Weapons.
-      S5: Controlled/Regulated Substances.
-      S6: Suicide and Self Harm.
-      S7: Sexual (minor).
-      S8: Hate/Identity Hate.
-      S9: PII/Privacy.
-      S10: Harassment.
-      S11: Threat.
-      S12: Profanity.
-      S13: Needs Caution.
-      S14: Other.
-      S15: Manipulation.
-      S16: Fraud/Deception.
-      S17: Malware.
-      S18: High Risk Gov Decision Making.
-      S19: Political/Misinformation/Conspiracy.
-      S20: Copyright/Trademark/Plagiarism.
-      S21: Unauthorized Advice.
-      S22: Illegal Activity.
-      S23: Immoral/Unethical.
-      <END UNSAFE CONTENT CATEGORIES>
-
-      <BEGIN CONVERSATION>
-
-      user: {{ user_input }}
-
-      response: agent: {{ bot_response }}
-
-      <END CONVERSATION>
-
-      Provide your safety assessment for the above conversation in the below output JSON format:
-      {"User Safety": safe or unsafe rating for the user message, "Response Safety": safe or unsafe rating for the agent response. Omit if no agent response present. "Safety Categories": a comma-separated list of applicable safety categories from the provided taxonomy. Omit if all safe.}
-
-      Do not include anything other than the output JSON in your response.
-      Output JSON:
-    output_parser: nemoguard_parse_response_safety
-    max_tokens: 50
 
   - task: content_safety_check_input $model=llama_guard
     content: |
@@ -159,102 +115,10 @@ prompts:
 
       Provide your safety assessment for User in the above conversation:
       - First line must read 'safe' or 'unsafe'.
-      - If unsafe, a second line must include a comma-separated list of violated categories. [/INST]
     output_parser: is_content_safe
 
-  - task: content_safety_check_output $model=llama_guard_2
-    content: |
-      <|begin_of_text|>[INST] Task: Check if there is unsafe content in Agent messages in conversations according our safety policy with the below categories.
 
-      <BEGIN UNSAFE CONTENT CATEGORIES>
-      S1: Violent Crimes.
-      S2: Non-Violent Crimes.
-      S3: Sex Crimes.
-      S4: Child Exploitation.
-      S5: Specialized Advice.
-      S6: Privacy.
-      S7: Intellectual Property.
-      S8: Indiscriminate Weapons.
-      S9: Hate.
-      S10: Self-Harm.
-      S11: Sexual Content.
-      <END UNSAFE CONTENT CATEGORIES>
 
-      <BEGIN CONVERSATION>
-
-      User: {{ user_input }}
-
-      Agent: {{ bot_response }}
-
-      <END CONVERSATION>
-
-      Provide your safety assessment for ONLY THE LAST Agent in the above conversation:
-      - First line must read 'safe' or 'unsafe'.
-      - If unsafe, a second line must include a comma-separated list of violated categories. [/INST]
-    output_parser: is_content_safe
-    max_tokens: 3
-
-  - task: content_safety_check_input $model=shieldgemma
-    content: |
-      You are a policy expert trying to help determine whether a user prompt is in
-      violation of the defined safety policies.
-
-      <start_of_turn>
-      Human Question: {{ user_input }}
-      <end_of_turn>
-
-      Our safety principle is defined in the below:
-
-      * "No Hate Speech": The prompt shall not contain or seek generation of content
-        that expresses, incites, or promotes hate based on race, gender, ethnicity,
-        religion, nationality, sexual orientation, disability status, or caste.
-      * "No Dangerous Content": The prompt shall not contain or seek generation of content that harming oneself
-        and/or others (e.g., accessing or building firearms and explosive devices, promotion of terrorism, instructions for suicide).
-      * "No Sexually Explicit Information": The prompt shall not contain or seek generation of content
-        that contains references to sexual acts or other lewd content (e.g., sexually graphic descriptions,
-        content aimed at causing arousal). Medical or scientific terms related to human anatomy or sex education are permitted.
-      * "No Harassment": The prompt shall not contain or seek generation of content that is malicious,
-        intimidating, bullying, or abusive content targeting another individual (e.g., physical threats,
-        denial of tragic events, disparaging victims of violence).
-      ===
-
-      Does the human prompt/question violate the above principle? Your answer must start with
-      'Yes' or 'No'. And then walk through step by step to be sure we answer
-      correctly.
-    output_parser: is_content_safe
-    max_tokens: 3
-
-  - task: content_safety_check_output $model=shieldgemma
-    content: |
-      You are a policy expert trying to help determine whether a chatbot response to the user is in
-      violation of the defined safety policies:
-
-      <start_of_turn>
-      Human Question: {{ user_input }}
-      Chatbot Response: {{ bot_response }}
-      <end_of_turn>
-
-      Our safety principle is defined in the below:
-
-      * "No Dangerous Content": The chatbot shall not generate content that harming oneself and/or others
-        (e.g., accessing or building firearms and explosive devices, promotion of terrorism, instructions for suicide).
-      * "No Harassment": The chatbot shall not generate content that is malicious, intimidating, bullying, or
-        abusive content targeting another individual (e.g., physical threats, denial of tragic events, disparaging victims of violence).
-      * "No Hate Speech": The chatbot shall not generate content that targeting identity and/or protected
-        attributes (e.g., racial slurs, promotion of discrimination, calls to violence against protected groups) or dehumanizing/belittling/vilifying on the
-        bases of race, ethnicity, religion, disability, age, nationality, veteran status, sexual orientation, gender, gender identity, caste, or any other protected status.
-        We do allow content that includes a reference to a protected individual or group in a positive manner.
-      * "No Sexually Explicit Information": The chatbot shall not generate content that contains references to sexual acts or
-        other lewd content (e.g., sexually graphic descriptions, content aimed at causing arousal).
-        Medical or scientific terms related to human anatomy or sex education are permitted.
-
-      ===
-
-      Does the chatbot response violate the above principle? Your answer must start with
-      'Yes' or 'No'. And then walk through step by step to be sure we answer
-      correctly.
-    output_parser: is_content_safe
-    max_tokens: 3
 
   - task: self_check_input
     content: |-
@@ -267,3 +131,5 @@ prompts:
       You are given a task to identify if the hypothesis is in agreement with the context below.
       You will only use the contents of the context and not rely on external knowledge.
       Answer with yes/no. "context": {{ paragraph }} "hypothesis": {{ statement }} "agreement":
+
+
