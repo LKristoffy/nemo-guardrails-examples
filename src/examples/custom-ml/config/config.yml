@@ -1,0 +1,9 @@
+models: []
+
+actions:
+  - src.examples.custom-ml.config.actions
+
+rails:
+  input:
+    flows:
+      - validate tabular data input

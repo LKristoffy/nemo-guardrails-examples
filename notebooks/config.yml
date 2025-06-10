@@ -1,0 +1,17 @@
+# config.yml
+models: []          # <- satisfies the schema, nothing will be loaded
+
+rails:
+  input:
+    flows:
+      - mask sensitive data on input     # Presidio (no LLM)
+      - injection detection              # regex / YARA (no LLM)
+  output:
+    flows:
+      - mask sensitive data on output
+  config:
+    sensitive_data_detection:            # Presidio tuning
+      input:
+        entities: [EMAIL_ADDRESS, PERSON]
+      output:
+        entities: [PERSON]

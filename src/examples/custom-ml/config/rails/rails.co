@@ -1,0 +1,7 @@
+define flow validate tabular data input
+    $res = ValidateTabularDataAction(csv_path="./src/examples/custom-ml/data/test_data.csv",sensitive="protected_attribute", label="target")
+
+    if not $res["fair_passed"]
+        bot "⚠️ The model shows a demographic-parity gap of {$res.dem_parity_gap:.3f}"
+        stop
+    bot "All checks passed. Proceeding…"
