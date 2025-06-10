@@ -7,8 +7,11 @@ PYTHON = python3
 
 OPENAI_API_KEY ?=
 
-all: install
-	@nemo_demo
+custom-ml: install
+	$(PYTHON) src/examples/custom-ml/demo.py
+
+input-checking:
+	cd src/examples/input-checking && $(PYTHON) demo.py
 
 install:
 	@echo "Installing/updating production dependencies..."
