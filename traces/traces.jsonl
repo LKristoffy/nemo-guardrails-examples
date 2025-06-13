@@ -2233,3 +2233,2139 @@
     }
   ]
 }
+{
+  "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "314a18a5-2b99-4a2f-aada-f88761608cd0",
+      "parent_id": null,
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 0.0,
+      "end_time": 19.67296576499939,
+      "duration": 19.67296576499939,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 19.67296576499939,
+        "interaction_seconds_total": 19.67296576499939
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "25c3a236-c651-40be-928a-3289e2b8fbed",
+      "parent_id": "314a18a5-2b99-4a2f-aada-f88761608cd0",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 0.0,
+      "end_time": 0.5339877605438232,
+      "duration": 0.5339877605438232,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "0cfefc1f-1b19-4024-82b5-2b00179094ae",
+      "parent_id": "25c3a236-c651-40be-928a-3289e2b8fbed",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 0.0003819465637207031,
+      "end_time": 0.53299880027771,
+      "duration": 0.5326168537139893,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.5326168537139893,
+        "action_mask_sensitive_data_seconds_total": 0.5326168537139893
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "ca04c6c9-decb-46c6-afad-f0ac4b9fa55b",
+      "parent_id": "314a18a5-2b99-4a2f-aada-f88761608cd0",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 0.5347256660461426,
+      "end_time": 6.139364719390869,
+      "duration": 5.604639053344727,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "d4e273de-2571-431f-90db-5fb8c6f4939d",
+      "parent_id": "ca04c6c9-decb-46c6-afad-f0ac4b9fa55b",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 0.5351998805999756,
+      "end_time": 6.135765790939331,
+      "duration": 5.6005659103393555,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 5.6005659103393555,
+        "action_content_safety_check_input_seconds_total": 5.6005659103393555
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "d753d776-1eb1-4cd2-b41e-d2ab5959b06a",
+      "parent_id": "d4e273de-2571-431f-90db-5fb8c6f4939d",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 0.5416009426116943,
+      "end_time": 6.129802942276001,
+      "duration": 5.588201999664307,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 5.588201999664307,
+        "llm_call_llama-guard3:8b_seconds_total": 5.588201999664307,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 1026,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 1028
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "955ba42d-f609-4aa3-ab4f-e0ce654c95ac",
+      "parent_id": "314a18a5-2b99-4a2f-aada-f88761608cd0",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 6.141467809677124,
+      "end_time": 9.169830799102783,
+      "duration": 3.028362989425659,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "1f3e1f33-0450-4f8c-844b-d4fb75964427",
+      "parent_id": "955ba42d-f609-4aa3-ab4f-e0ce654c95ac",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 6.142672777175903,
+      "end_time": 9.166942834854126,
+      "duration": 3.0242700576782227,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 3.0242700576782227,
+        "action_self_check_input_seconds_total": 3.0242700576782227
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "5281cacc-7a25-4b12-b2c0-f88988d67cae",
+      "parent_id": "1f3e1f33-0450-4f8c-844b-d4fb75964427",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 6.147241830825806,
+      "end_time": 9.164292812347412,
+      "duration": 3.0170509815216064,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 3.0170509815216064,
+        "llm_call_gpt-3.5-turbo_seconds_total": 3.0170509815216064,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 45,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 1,
+        "llm_call_gpt-3.5-turbo_tokens_total": 46
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "c794b7ff-cc9d-456c-ba21-e715656bb188",
+      "parent_id": "314a18a5-2b99-4a2f-aada-f88761608cd0",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 9.171815872192383,
+      "end_time": 19.09651470184326,
+      "duration": 9.924698829650879,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "9b64f862-8152-49f5-89de-de797c2491d2",
+      "parent_id": "c794b7ff-cc9d-456c-ba21-e715656bb188",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 9.173319816589355,
+      "end_time": 19.094892740249634,
+      "duration": 9.921572923660278,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 9.921572923660278,
+        "action_jailbreak_detection_heuristics_seconds_total": 9.921572923660278
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "0e3ef39d-823e-497f-9fac-dc307ab97aa3",
+      "parent_id": "314a18a5-2b99-4a2f-aada-f88761608cd0",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 19.09925389289856,
+      "end_time": 19.669939756393433,
+      "duration": 0.570685863494873,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "9b01d1ee-0486-4322-ba0d-c1cc53915e88",
+      "parent_id": "0e3ef39d-823e-497f-9fac-dc307ab97aa3",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 19.09926176071167,
+      "end_time": 19.66230082511902,
+      "duration": 0.5630390644073486,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 0.5630390644073486,
+        "action_generate_user_intent_seconds_total": 0.5630390644073486
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "349b7477-5fb4-4570-81f2-b7c88b2d6d51",
+      "parent_id": "9b01d1ee-0486-4322-ba0d-c1cc53915e88",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 19.101911783218384,
+      "end_time": 19.658281803131104,
+      "duration": 0.5563700199127197,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.5563700199127197,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.5563700199127197,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 76,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 9,
+        "llm_call_gpt-3.5-turbo_tokens_total": 85
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "b4e1b932-b4f3-4351-b486-912a626c1b9b",
+      "parent_id": "314a18a5-2b99-4a2f-aada-f88761608cd0",
+      "trace_id": "abe45595-92fb-421a-a947-0de4e9d68ef1",
+      "start_time": 19.669939756393433,
+      "end_time": 19.67296576499939,
+      "duration": 0.0030260086059570312,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "9dd35142-d31f-4f3a-b509-79d2927e019e",
+      "parent_id": null,
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.0,
+      "end_time": 2.9653282165527344,
+      "duration": 2.9653282165527344,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 2.9653282165527344,
+        "interaction_seconds_total": 2.9653282165527344
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "cc5d6a5b-b21c-4525-899e-9765ea243971",
+      "parent_id": "9dd35142-d31f-4f3a-b509-79d2927e019e",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.0,
+      "end_time": 0.01801609992980957,
+      "duration": 0.01801609992980957,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "d1f4612e-724e-4a31-bfc4-80bae146720f",
+      "parent_id": "cc5d6a5b-b21c-4525-899e-9765ea243971",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.003763914108276367,
+      "end_time": 0.01386117935180664,
+      "duration": 0.010097265243530273,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.010097265243530273,
+        "action_mask_sensitive_data_seconds_total": 0.010097265243530273
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "c700fa96-b655-4bf9-9f6e-86da3d215ffe",
+      "parent_id": "9dd35142-d31f-4f3a-b509-79d2927e019e",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.021581172943115234,
+      "end_time": 0.574904203414917,
+      "duration": 0.5533230304718018,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "11c8b788-79de-445d-a8cc-da12f6554d30",
+      "parent_id": "c700fa96-b655-4bf9-9f6e-86da3d215ffe",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.02435302734375,
+      "end_time": 0.5626471042633057,
+      "duration": 0.5382940769195557,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.5382940769195557,
+        "action_content_safety_check_input_seconds_total": 0.5382940769195557
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "2701c7d9-d5c9-407f-809d-f1e508f7730a",
+      "parent_id": "11c8b788-79de-445d-a8cc-da12f6554d30",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.03452897071838379,
+      "end_time": 0.5579540729522705,
+      "duration": 0.5234251022338867,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.5234251022338867,
+        "llm_call_llama-guard3:8b_seconds_total": 0.5234251022338867,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 1031,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 1033
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "54ec2b4e-5e52-4464-9763-231a5687f575",
+      "parent_id": "9dd35142-d31f-4f3a-b509-79d2927e019e",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.5813770294189453,
+      "end_time": 1.5114421844482422,
+      "duration": 0.9300651550292969,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "470305f2-7adf-438e-973a-665dab164507",
+      "parent_id": "54ec2b4e-5e52-4464-9763-231a5687f575",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.5856649875640869,
+      "end_time": 1.5022473335266113,
+      "duration": 0.9165823459625244,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 0.9165823459625244,
+        "action_self_check_input_seconds_total": 0.9165823459625244
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "b3f643f2-7ddd-4420-86d3-53586760269d",
+      "parent_id": "470305f2-7adf-438e-973a-665dab164507",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 0.5896451473236084,
+      "end_time": 1.4975910186767578,
+      "duration": 0.9079458713531494,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.9079458713531494,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.9079458713531494,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 50,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 2,
+        "llm_call_gpt-3.5-turbo_tokens_total": 52
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "4b71ebe5-97b9-4777-afa2-dabcedc9aa33",
+      "parent_id": "9dd35142-d31f-4f3a-b509-79d2927e019e",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 1.518381118774414,
+      "end_time": 1.680760145187378,
+      "duration": 0.16237902641296387,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "f1f339e7-6be0-4d8e-9a27-07b2ae3695ce",
+      "parent_id": "4b71ebe5-97b9-4777-afa2-dabcedc9aa33",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 1.523169994354248,
+      "end_time": 1.6782362461090088,
+      "duration": 0.15506625175476074,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 0.15506625175476074,
+        "action_jailbreak_detection_heuristics_seconds_total": 0.15506625175476074
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "a9ddca8c-5d22-44e1-81be-baffc79e767e",
+      "parent_id": "9dd35142-d31f-4f3a-b509-79d2927e019e",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 1.6861391067504883,
+      "end_time": 2.960268020629883,
+      "duration": 1.2741289138793945,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "475dff5e-8a4a-489c-bc3e-593f20c71ae5",
+      "parent_id": "a9ddca8c-5d22-44e1-81be-baffc79e767e",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 1.6861412525177002,
+      "end_time": 2.939152240753174,
+      "duration": 1.2530109882354736,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 1.2530109882354736,
+        "action_generate_user_intent_seconds_total": 1.2530109882354736
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "59ed5b61-8c73-42f2-9f80-e36611fb1192",
+      "parent_id": "475dff5e-8a4a-489c-bc3e-593f20c71ae5",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 1.6893329620361328,
+      "end_time": 2.9330339431762695,
+      "duration": 1.2437009811401367,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 1.2437009811401367,
+        "llm_call_gpt-3.5-turbo_seconds_total": 1.2437009811401367,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 101,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 44,
+        "llm_call_gpt-3.5-turbo_tokens_total": 145
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "ae17a37a-a6fc-4b7a-b836-a5fb9dbf9c8d",
+      "parent_id": "9dd35142-d31f-4f3a-b509-79d2927e019e",
+      "trace_id": "f4878a58-1948-4448-b404-79df2628ae67",
+      "start_time": 2.960268020629883,
+      "end_time": 2.9653282165527344,
+      "duration": 0.0050601959228515625,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "a5a03b36-3b33-498d-ae02-4e9c81c645a0",
+      "parent_id": null,
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.0,
+      "end_time": 3.4185972213745117,
+      "duration": 3.4185972213745117,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 3.4185972213745117,
+        "interaction_seconds_total": 3.4185972213745117
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "470196cd-463e-4fa0-892e-66ea5d44dd8a",
+      "parent_id": "a5a03b36-3b33-498d-ae02-4e9c81c645a0",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.0,
+      "end_time": 0.04349112510681152,
+      "duration": 0.04349112510681152,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "eb40dc03-438a-48c6-aa85-0e2029d5df73",
+      "parent_id": "470196cd-463e-4fa0-892e-66ea5d44dd8a",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.005942106246948242,
+      "end_time": 0.03972315788269043,
+      "duration": 0.03378105163574219,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.03378105163574219,
+        "action_mask_sensitive_data_seconds_total": 0.03378105163574219
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "1c433af1-6b67-471f-9cd8-c3eed87e35b3",
+      "parent_id": "a5a03b36-3b33-498d-ae02-4e9c81c645a0",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.04658818244934082,
+      "end_time": 0.5940310955047607,
+      "duration": 0.5474429130554199,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "f1e16aa5-1826-4fc6-bcb5-5ca66abe87b8",
+      "parent_id": "1c433af1-6b67-471f-9cd8-c3eed87e35b3",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.049278974533081055,
+      "end_time": 0.5810072422027588,
+      "duration": 0.5317282676696777,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.5317282676696777,
+        "action_content_safety_check_input_seconds_total": 0.5317282676696777
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "49e3aaa5-9b96-449b-a7a5-e9379b1b36b7",
+      "parent_id": "f1e16aa5-1826-4fc6-bcb5-5ca66abe87b8",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.05543398857116699,
+      "end_time": 0.5759501457214355,
+      "duration": 0.5205161571502686,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.5205161571502686,
+        "llm_call_llama-guard3:8b_seconds_total": 0.5205161571502686,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 1041,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 1043
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "05133803-c0ab-4354-b5ec-e724b61df306",
+      "parent_id": "a5a03b36-3b33-498d-ae02-4e9c81c645a0",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.603262186050415,
+      "end_time": 1.4575722217559814,
+      "duration": 0.8543100357055664,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "d56dd5d2-6c11-4774-9bcf-db6008fa9b50",
+      "parent_id": "05133803-c0ab-4354-b5ec-e724b61df306",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.6088812351226807,
+      "end_time": 1.4437370300292969,
+      "duration": 0.8348557949066162,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 0.8348557949066162,
+        "action_self_check_input_seconds_total": 0.8348557949066162
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "60aca5ca-3a9f-41ee-aacf-d7330da8827a",
+      "parent_id": "d56dd5d2-6c11-4774-9bcf-db6008fa9b50",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 0.6121180057525635,
+      "end_time": 1.438858985900879,
+      "duration": 0.8267409801483154,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.8267409801483154,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.8267409801483154,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 60,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 1,
+        "llm_call_gpt-3.5-turbo_tokens_total": 61
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "ef040a99-f4b6-4088-8f97-b4bcb31a498d",
+      "parent_id": "a5a03b36-3b33-498d-ae02-4e9c81c645a0",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 1.4665610790252686,
+      "end_time": 1.586834192276001,
+      "duration": 0.12027311325073242,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "bf10f578-11e0-4007-be11-97aec18148cc",
+      "parent_id": "ef040a99-f4b6-4088-8f97-b4bcb31a498d",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 1.4723081588745117,
+      "end_time": 1.5835630893707275,
+      "duration": 0.11125493049621582,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 0.11125493049621582,
+        "action_jailbreak_detection_heuristics_seconds_total": 0.11125493049621582
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "b8f0c054-7b04-4fa3-a2f9-689460b13140",
+      "parent_id": "a5a03b36-3b33-498d-ae02-4e9c81c645a0",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 1.5939829349517822,
+      "end_time": 3.4117751121520996,
+      "duration": 1.8177921772003174,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "98a3394c-360f-470e-9e3f-88425c3c3e81",
+      "parent_id": "b8f0c054-7b04-4fa3-a2f9-689460b13140",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 1.5939860343933105,
+      "end_time": 3.388594150543213,
+      "duration": 1.7946081161499023,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 1.7946081161499023,
+        "action_generate_user_intent_seconds_total": 1.7946081161499023
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "bd2b3995-7ed3-4687-8610-5557324b8334",
+      "parent_id": "98a3394c-360f-470e-9e3f-88425c3c3e81",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 1.597560167312622,
+      "end_time": 3.3849852085113525,
+      "duration": 1.7874250411987305,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 1.7874250411987305,
+        "llm_call_gpt-3.5-turbo_seconds_total": 1.7874250411987305,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 171,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 105,
+        "llm_call_gpt-3.5-turbo_tokens_total": 276
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "929294a3-af6b-47fa-aed4-347e66819734",
+      "parent_id": "a5a03b36-3b33-498d-ae02-4e9c81c645a0",
+      "trace_id": "ed204c86-1759-4ab2-8814-afe03082e70f",
+      "start_time": 3.4117751121520996,
+      "end_time": 3.4185972213745117,
+      "duration": 0.006822109222412109,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "70b4428b-c548-438c-9206-fa5a4f950b64",
+      "parent_id": null,
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.0,
+      "end_time": 4.968592166900635,
+      "duration": 4.968592166900635,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 4.968592166900635,
+        "interaction_seconds_total": 4.968592166900635
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "7226c53a-ce8a-4ee4-842e-caf1799b667b",
+      "parent_id": "70b4428b-c548-438c-9206-fa5a4f950b64",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.0,
+      "end_time": 0.023198843002319336,
+      "duration": 0.023198843002319336,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "83def892-97f0-434a-8e86-16c0fafb7a5f",
+      "parent_id": "7226c53a-ce8a-4ee4-842e-caf1799b667b",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.0059010982513427734,
+      "end_time": 0.01781916618347168,
+      "duration": 0.011918067932128906,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.011918067932128906,
+        "action_mask_sensitive_data_seconds_total": 0.011918067932128906
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "8d804b29-5c7c-4991-8c1f-3992be95072b",
+      "parent_id": "70b4428b-c548-438c-9206-fa5a4f950b64",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.0265500545501709,
+      "end_time": 0.6393210887908936,
+      "duration": 0.6127710342407227,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "2281d753-6879-4c9a-8cc4-05dba7287158",
+      "parent_id": "8d804b29-5c7c-4991-8c1f-3992be95072b",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.030675888061523438,
+      "end_time": 0.618048906326294,
+      "duration": 0.5873730182647705,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.5873730182647705,
+        "action_content_safety_check_input_seconds_total": 0.5873730182647705
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "05230513-9823-45af-b850-08749b17aba2",
+      "parent_id": "2281d753-6879-4c9a-8cc4-05dba7287158",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.037619829177856445,
+      "end_time": 0.6132750511169434,
+      "duration": 0.5756552219390869,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.5756552219390869,
+        "llm_call_llama-guard3:8b_seconds_total": 0.5756552219390869,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 1051,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 1053
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "b84ef7f1-6fd6-438a-9b03-5f54309b1bc8",
+      "parent_id": "70b4428b-c548-438c-9206-fa5a4f950b64",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.649385929107666,
+      "end_time": 1.05318021774292,
+      "duration": 0.4037942886352539,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "72e8bc87-7555-41b6-a6be-b7ab86ab9616",
+      "parent_id": "b84ef7f1-6fd6-438a-9b03-5f54309b1bc8",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.6561121940612793,
+      "end_time": 1.0381848812103271,
+      "duration": 0.38207268714904785,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 0.38207268714904785,
+        "action_self_check_input_seconds_total": 0.38207268714904785
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "16c8459d-76e2-4c13-8ea4-d3c618885758",
+      "parent_id": "72e8bc87-7555-41b6-a6be-b7ab86ab9616",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 0.6589210033416748,
+      "end_time": 1.034317970275879,
+      "duration": 0.3753969669342041,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.3753969669342041,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.3753969669342041,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 70,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 1,
+        "llm_call_gpt-3.5-turbo_tokens_total": 71
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "19d0963d-683e-4daa-ba35-84dcc74a7aea",
+      "parent_id": "70b4428b-c548-438c-9206-fa5a4f950b64",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 1.0641558170318604,
+      "end_time": 1.397752046585083,
+      "duration": 0.33359622955322266,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "4e806cd9-6c7d-41ec-a354-b1913bd90cfb",
+      "parent_id": "19d0963d-683e-4daa-ba35-84dcc74a7aea",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 1.0712080001831055,
+      "end_time": 1.3938579559326172,
+      "duration": 0.3226499557495117,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 0.3226499557495117,
+        "action_jailbreak_detection_heuristics_seconds_total": 0.3226499557495117
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "8a128979-3df5-4654-9707-3cd3c84633e6",
+      "parent_id": "70b4428b-c548-438c-9206-fa5a4f950b64",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 1.4073100090026855,
+      "end_time": 4.961142063140869,
+      "duration": 3.5538320541381836,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "b0ca44f9-d3b2-4e73-9891-8e2f76ec5da1",
+      "parent_id": "8a128979-3df5-4654-9707-3cd3c84633e6",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 1.4073131084442139,
+      "end_time": 4.936553001403809,
+      "duration": 3.5292398929595947,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 3.5292398929595947,
+        "action_generate_user_intent_seconds_total": 3.5292398929595947
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "7d7c4a07-db79-4d96-967d-656fef33146d",
+      "parent_id": "b0ca44f9-d3b2-4e73-9891-8e2f76ec5da1",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 1.4115278720855713,
+      "end_time": 4.926609039306641,
+      "duration": 3.5150811672210693,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 3.5150811672210693,
+        "llm_call_gpt-3.5-turbo_seconds_total": 3.5150811672210693,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 312,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 429,
+        "llm_call_gpt-3.5-turbo_tokens_total": 741
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "9d936044-42f3-408d-bc75-f92519bec494",
+      "parent_id": "70b4428b-c548-438c-9206-fa5a4f950b64",
+      "trace_id": "205adea9-3226-4c4a-8d60-45169feb51a8",
+      "start_time": 4.961142063140869,
+      "end_time": 4.968592166900635,
+      "duration": 0.007450103759765625,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "86721d37-d7d9-4351-acfe-eadefb1653a9",
+      "parent_id": null,
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.0,
+      "end_time": 5.807038068771362,
+      "duration": 5.807038068771362,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 5.807038068771362,
+        "interaction_seconds_total": 5.807038068771362
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "2c92e971-ba58-4137-a765-f9df53a8cbde",
+      "parent_id": "86721d37-d7d9-4351-acfe-eadefb1653a9",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.0,
+      "end_time": 0.023960113525390625,
+      "duration": 0.023960113525390625,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "db64cd94-eff4-4c6b-868b-654a795ed587",
+      "parent_id": "2c92e971-ba58-4137-a765-f9df53a8cbde",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.007525920867919922,
+      "end_time": 0.017138957977294922,
+      "duration": 0.009613037109375,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.009613037109375,
+        "action_mask_sensitive_data_seconds_total": 0.009613037109375
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "33d3bef8-851c-44fc-9c5c-45690f506852",
+      "parent_id": "86721d37-d7d9-4351-acfe-eadefb1653a9",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.029015064239501953,
+      "end_time": 0.6510300636291504,
+      "duration": 0.6220149993896484,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "c4378c80-2293-40c0-b9fe-ddab570c595f",
+      "parent_id": "33d3bef8-851c-44fc-9c5c-45690f506852",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.03448295593261719,
+      "end_time": 0.6244480609893799,
+      "duration": 0.5899651050567627,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.5899651050567627,
+        "action_content_safety_check_input_seconds_total": 0.5899651050567627
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "ccb18eb1-c872-4b85-b342-c61e49c91735",
+      "parent_id": "c4378c80-2293-40c0-b9fe-ddab570c595f",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.04160904884338379,
+      "end_time": 0.6197030544281006,
+      "duration": 0.5780940055847168,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.5780940055847168,
+        "llm_call_llama-guard3:8b_seconds_total": 0.5780940055847168,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 1043,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 1045
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "c6b16493-3ee3-4c84-b088-fa66a68714f2",
+      "parent_id": "86721d37-d7d9-4351-acfe-eadefb1653a9",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.6626760959625244,
+      "end_time": 1.1451761722564697,
+      "duration": 0.4825000762939453,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "b56c12be-a26a-4267-bdb8-dcf63caedb9d",
+      "parent_id": "c6b16493-3ee3-4c84-b088-fa66a68714f2",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.6712169647216797,
+      "end_time": 1.126142978668213,
+      "duration": 0.4549260139465332,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 0.4549260139465332,
+        "action_self_check_input_seconds_total": 0.4549260139465332
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "7bba1d48-f0fe-492f-8ac2-37fcdbeaf5e9",
+      "parent_id": "b56c12be-a26a-4267-bdb8-dcf63caedb9d",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 0.6736431121826172,
+      "end_time": 1.1234049797058105,
+      "duration": 0.44976186752319336,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.44976186752319336,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.44976186752319336,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 62,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 1,
+        "llm_call_gpt-3.5-turbo_tokens_total": 63
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "f29455e7-dfbc-4756-a4fd-d54df3d097ba",
+      "parent_id": "86721d37-d7d9-4351-acfe-eadefb1653a9",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 1.1572129726409912,
+      "end_time": 1.2861518859863281,
+      "duration": 0.12893891334533691,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "9601646f-5e8a-43c3-a086-d5a478afb324",
+      "parent_id": "f29455e7-dfbc-4756-a4fd-d54df3d097ba",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 1.165482997894287,
+      "end_time": 1.2811899185180664,
+      "duration": 0.1157069206237793,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 0.1157069206237793,
+        "action_jailbreak_detection_heuristics_seconds_total": 0.1157069206237793
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "1e587ac8-7cd4-4ba3-aa9c-f763ea2d191c",
+      "parent_id": "86721d37-d7d9-4351-acfe-eadefb1653a9",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 1.2978801727294922,
+      "end_time": 5.798532009124756,
+      "duration": 4.500651836395264,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "612fe3f6-2e73-441f-8dec-3626ce882949",
+      "parent_id": "1e587ac8-7cd4-4ba3-aa9c-f763ea2d191c",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 1.2978827953338623,
+      "end_time": 5.770276069641113,
+      "duration": 4.472393274307251,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 4.472393274307251,
+        "action_generate_user_intent_seconds_total": 4.472393274307251
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "2ab95da2-f7b9-4c3c-bd1c-2704c496158f",
+      "parent_id": "612fe3f6-2e73-441f-8dec-3626ce882949",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 1.3040049076080322,
+      "end_time": 5.760921955108643,
+      "duration": 4.45691704750061,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 4.45691704750061,
+        "llm_call_gpt-3.5-turbo_seconds_total": 4.45691704750061,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 768,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 507,
+        "llm_call_gpt-3.5-turbo_tokens_total": 1275
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "0064a841-88f0-4109-95ba-af6f43f51ede",
+      "parent_id": "86721d37-d7d9-4351-acfe-eadefb1653a9",
+      "trace_id": "1d731e91-67c2-4af1-abbc-93fe2a46c7cb",
+      "start_time": 5.798532009124756,
+      "end_time": 5.807038068771362,
+      "duration": 0.008506059646606445,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "8ef2777e-dbe8-4bea-a56f-48f45ebf720a",
+      "parent_id": null,
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.0,
+      "end_time": 0.7324981689453125,
+      "duration": 0.7324981689453125,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 0.7324981689453125,
+        "interaction_seconds_total": 0.7324981689453125
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "4c926928-5b3e-47ed-945f-5b228eab88de",
+      "parent_id": "8ef2777e-dbe8-4bea-a56f-48f45ebf720a",
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.0,
+      "end_time": 0.022564172744750977,
+      "duration": 0.022564172744750977,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "81b28a5a-feff-4102-a49b-0cc1bebda2e3",
+      "parent_id": "4c926928-5b3e-47ed-945f-5b228eab88de",
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.008844137191772461,
+      "end_time": 0.015697240829467773,
+      "duration": 0.0068531036376953125,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.0068531036376953125,
+        "action_mask_sensitive_data_seconds_total": 0.0068531036376953125
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "2cd05b7b-8fab-4c0a-9fb0-e6584916801c",
+      "parent_id": "8ef2777e-dbe8-4bea-a56f-48f45ebf720a",
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.030333995819091797,
+      "end_time": 0.7324981689453125,
+      "duration": 0.7021641731262207,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "ff54a7d8-4566-4a50-876c-0ac46099dc4a",
+      "parent_id": "2cd05b7b-8fab-4c0a-9fb0-e6584916801c",
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.03639817237854004,
+      "end_time": 0.6693980693817139,
+      "duration": 0.6329998970031738,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.6329998970031738,
+        "action_content_safety_check_input_seconds_total": 0.6329998970031738
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "771f0114-92d4-450d-830c-6da987284e23",
+      "parent_id": "ff54a7d8-4566-4a50-876c-0ac46099dc4a",
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.04311823844909668,
+      "end_time": 0.6632440090179443,
+      "duration": 0.6201257705688477,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.6201257705688477,
+        "llm_call_llama-guard3:8b_seconds_total": 0.6201257705688477,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 1036,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 5,
+        "llm_call_llama-guard3:8b_tokens_total": 1041
+      }
+    },
+    {
+      "name": "action: retrieve_relevant_chunks",
+      "span_id": "2e81f4de-decb-4659-8bcf-75bd2ea05c7d",
+      "parent_id": "2cd05b7b-8fab-4c0a-9fb0-e6584916801c",
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.7002871036529541,
+      "end_time": 0.701073169708252,
+      "duration": 0.0007860660552978516,
+      "metrics": {
+        "action_retrieve_relevant_chunks_total": 1,
+        "action_retrieve_relevant_chunks_seconds_avg": 0.0007860660552978516,
+        "action_retrieve_relevant_chunks_seconds_total": 0.0007860660552978516
+      }
+    },
+    {
+      "name": "action: generate_bot_message",
+      "span_id": "39621fb2-ea0a-428d-82ea-7460476e3257",
+      "parent_id": "2cd05b7b-8fab-4c0a-9fb0-e6584916801c",
+      "trace_id": "fc8d353f-f04f-4df1-b911-15673f9c0f49",
+      "start_time": 0.7101142406463623,
+      "end_time": 0.7113511562347412,
+      "duration": 0.0012369155883789062,
+      "metrics": {
+        "action_generate_bot_message_total": 1,
+        "action_generate_bot_message_seconds_avg": 0.0012369155883789062,
+        "action_generate_bot_message_seconds_total": 0.0012369155883789062
+      }
+    }
+  ]
+}
+{
+  "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "f0656089-20fe-4cf2-b0d4-92980144764f",
+      "parent_id": null,
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 0.0,
+      "end_time": 15.650400161743164,
+      "duration": 15.650400161743164,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 15.650400161743164,
+        "interaction_seconds_total": 15.650400161743164
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "11d8e958-3150-496d-8bd2-b13626464e0b",
+      "parent_id": "f0656089-20fe-4cf2-b0d4-92980144764f",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 0.0,
+      "end_time": 0.4891481399536133,
+      "duration": 0.4891481399536133,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "7827820c-4a1d-4b57-880d-c2cfd72cb6a8",
+      "parent_id": "11d8e958-3150-496d-8bd2-b13626464e0b",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 0.00030517578125,
+      "end_time": 0.4873473644256592,
+      "duration": 0.4870421886444092,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.4870421886444092,
+        "action_mask_sensitive_data_seconds_total": 0.4870421886444092
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "35326394-0dcb-4a07-85a9-811e1fa46e09",
+      "parent_id": "f0656089-20fe-4cf2-b0d4-92980144764f",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 0.4898643493652344,
+      "end_time": 3.3240771293640137,
+      "duration": 2.8342127799987793,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "a7bfc2bb-0750-41e0-af71-9f7373596568",
+      "parent_id": "35326394-0dcb-4a07-85a9-811e1fa46e09",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 0.49030017852783203,
+      "end_time": 3.3191311359405518,
+      "duration": 2.8288309574127197,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 2.8288309574127197,
+        "action_content_safety_check_input_seconds_total": 2.8288309574127197
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "6fef8aaf-87fb-4281-ae30-cde27bf772a4",
+      "parent_id": "a7bfc2bb-0750-41e0-af71-9f7373596568",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 0.49423718452453613,
+      "end_time": 3.314328193664551,
+      "duration": 2.8200910091400146,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 2.8200910091400146,
+        "llm_call_llama-guard3:8b_seconds_total": 2.8200910091400146,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 397,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 399
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "dbb3c58a-b98f-44ff-a676-9ea2cef892df",
+      "parent_id": "f0656089-20fe-4cf2-b0d4-92980144764f",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 3.3275482654571533,
+      "end_time": 4.958965063095093,
+      "duration": 1.6314167976379395,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "86b1c8f2-30f2-4c59-ade1-8f200f3516fb",
+      "parent_id": "dbb3c58a-b98f-44ff-a676-9ea2cef892df",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 3.329073190689087,
+      "end_time": 4.952821969985962,
+      "duration": 1.623748779296875,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 1.623748779296875,
+        "action_self_check_input_seconds_total": 1.623748779296875
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "fd9a9ff4-7c7c-40ac-b059-10d2d670b713",
+      "parent_id": "86b1c8f2-30f2-4c59-ade1-8f200f3516fb",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 3.333390235900879,
+      "end_time": 4.948467254638672,
+      "duration": 1.615077018737793,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 1.615077018737793,
+        "llm_call_gpt-3.5-turbo_seconds_total": 1.615077018737793,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 45,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 2,
+        "llm_call_gpt-3.5-turbo_tokens_total": 47
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "d1d264cf-b245-443e-8522-606346e7958d",
+      "parent_id": "f0656089-20fe-4cf2-b0d4-92980144764f",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 4.9671571254730225,
+      "end_time": 14.68857717514038,
+      "duration": 9.721420049667358,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "1249b325-d028-4c47-997e-3e061576b689",
+      "parent_id": "d1d264cf-b245-443e-8522-606346e7958d",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 4.969727039337158,
+      "end_time": 14.686887264251709,
+      "duration": 9.71716022491455,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 9.71716022491455,
+        "action_jailbreak_detection_heuristics_seconds_total": 9.71716022491455
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "6020414e-b987-4bce-838e-5e330cdef52d",
+      "parent_id": "f0656089-20fe-4cf2-b0d4-92980144764f",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 14.691487073898315,
+      "end_time": 15.644857168197632,
+      "duration": 0.9533700942993164,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "ac622008-264a-4e64-b05e-b0c8b7f40358",
+      "parent_id": "6020414e-b987-4bce-838e-5e330cdef52d",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 14.691490173339844,
+      "end_time": 15.633982181549072,
+      "duration": 0.9424920082092285,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 0.9424920082092285,
+        "action_generate_user_intent_seconds_total": 0.9424920082092285
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "1b456b03-ce27-4424-b14f-130a89555343",
+      "parent_id": "ac622008-264a-4e64-b05e-b0c8b7f40358",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 14.694561004638672,
+      "end_time": 15.627103090286255,
+      "duration": 0.932542085647583,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.932542085647583,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.932542085647583,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 76,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 9,
+        "llm_call_gpt-3.5-turbo_tokens_total": 85
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "57e19f34-7bcd-47c7-82e6-7bd24d700796",
+      "parent_id": "f0656089-20fe-4cf2-b0d4-92980144764f",
+      "trace_id": "15dca375-2fe1-4762-abb9-3b045c95ec23",
+      "start_time": 15.644857168197632,
+      "end_time": 15.650400161743164,
+      "duration": 0.0055429935455322266,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "cbf9bfd6-2ba5-4737-8ad8-b5bdd2d70758",
+      "parent_id": null,
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 0.0,
+      "end_time": 14.28375506401062,
+      "duration": 14.28375506401062,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 14.28375506401062,
+        "interaction_seconds_total": 14.28375506401062
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "e0cbd667-9974-4aee-9e11-31e7c61e7ab8",
+      "parent_id": "cbf9bfd6-2ba5-4737-8ad8-b5bdd2d70758",
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 0.0,
+      "end_time": 0.03757905960083008,
+      "duration": 0.03757905960083008,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "2423b065-7b07-4f94-92b6-c7356f348147",
+      "parent_id": "e0cbd667-9974-4aee-9e11-31e7c61e7ab8",
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 0.002613067626953125,
+      "end_time": 0.03595614433288574,
+      "duration": 0.03334307670593262,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.03334307670593262,
+        "action_mask_sensitive_data_seconds_total": 0.03334307670593262
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "56441d2e-7f3f-43a5-9622-5aeed58dac6d",
+      "parent_id": "cbf9bfd6-2ba5-4737-8ad8-b5bdd2d70758",
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 0.03864717483520508,
+      "end_time": 14.28375506401062,
+      "duration": 14.245107889175415,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "0db57804-b219-459c-9c92-cf7dbce592e2",
+      "parent_id": "56441d2e-7f3f-43a5-9622-5aeed58dac6d",
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 0.03931403160095215,
+      "end_time": 14.260755062103271,
+      "duration": 14.22144103050232,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 14.22144103050232,
+        "action_content_safety_check_input_seconds_total": 14.22144103050232
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "ac237caf-dd60-4b1c-84b0-941cebb53aa8",
+      "parent_id": "0db57804-b219-459c-9c92-cf7dbce592e2",
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 0.04439711570739746,
+      "end_time": 14.25626516342163,
+      "duration": 14.211868047714233,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 14.211868047714233,
+        "llm_call_llama-guard3:8b_seconds_total": 14.211868047714233,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 414,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 5,
+        "llm_call_llama-guard3:8b_tokens_total": 419
+      }
+    },
+    {
+      "name": "action: retrieve_relevant_chunks",
+      "span_id": "ff6f34fc-6122-447c-8563-463b6df229ef",
+      "parent_id": "56441d2e-7f3f-43a5-9622-5aeed58dac6d",
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 14.2656991481781,
+      "end_time": 14.267313957214355,
+      "duration": 0.0016148090362548828,
+      "metrics": {
+        "action_retrieve_relevant_chunks_total": 1,
+        "action_retrieve_relevant_chunks_seconds_avg": 0.0016148090362548828,
+        "action_retrieve_relevant_chunks_seconds_total": 0.0016148090362548828
+      }
+    },
+    {
+      "name": "action: generate_bot_message",
+      "span_id": "5fd23a7b-b712-4c6d-9b5c-a9afe310c9e6",
+      "parent_id": "56441d2e-7f3f-43a5-9622-5aeed58dac6d",
+      "trace_id": "d89e57c1-c644-4d57-b4d6-7e09a1823ee8",
+      "start_time": 14.271159172058105,
+      "end_time": 14.274317264556885,
+      "duration": 0.003158092498779297,
+      "metrics": {
+        "action_generate_bot_message_total": 1,
+        "action_generate_bot_message_seconds_avg": 0.003158092498779297,
+        "action_generate_bot_message_seconds_total": 0.003158092498779297
+      }
+    }
+  ]
+}
+{
+  "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "e5170d47-85c1-4974-8a5d-b07bc7204bc7",
+      "parent_id": null,
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.0,
+      "end_time": 0.6801369190216064,
+      "duration": 0.6801369190216064,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 0.6801369190216064,
+        "interaction_seconds_total": 0.6801369190216064
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "77de0acf-4869-4b2f-a5e2-e902ca509e09",
+      "parent_id": "e5170d47-85c1-4974-8a5d-b07bc7204bc7",
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.0,
+      "end_time": 0.022638797760009766,
+      "duration": 0.022638797760009766,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "a2ec9db0-4f6a-488a-b20a-2bf4bf899fde",
+      "parent_id": "77de0acf-4869-4b2f-a5e2-e902ca509e09",
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.0033729076385498047,
+      "end_time": 0.019549846649169922,
+      "duration": 0.016176939010620117,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.016176939010620117,
+        "action_mask_sensitive_data_seconds_total": 0.016176939010620117
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "67c3f833-8c0e-48b4-8182-2299727880d9",
+      "parent_id": "e5170d47-85c1-4974-8a5d-b07bc7204bc7",
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.02533888816833496,
+      "end_time": 0.6801369190216064,
+      "duration": 0.6547980308532715,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "ba65782a-d9fa-4814-ba5d-270f13f79b9a",
+      "parent_id": "67c3f833-8c0e-48b4-8182-2299727880d9",
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.027048826217651367,
+      "end_time": 0.6532108783721924,
+      "duration": 0.626162052154541,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.626162052154541,
+        "action_content_safety_check_input_seconds_total": 0.626162052154541
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "c12eaa76-68a4-49a8-8dcf-927ab58328a6",
+      "parent_id": "ba65782a-d9fa-4814-ba5d-270f13f79b9a",
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.03222775459289551,
+      "end_time": 0.650615930557251,
+      "duration": 0.6183881759643555,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.6183881759643555,
+        "llm_call_llama-guard3:8b_seconds_total": 0.6183881759643555,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 410,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 5,
+        "llm_call_llama-guard3:8b_tokens_total": 415
+      }
+    },
+    {
+      "name": "action: retrieve_relevant_chunks",
+      "span_id": "17e611e2-a537-430d-9a60-db01f959c6e1",
+      "parent_id": "67c3f833-8c0e-48b4-8182-2299727880d9",
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.6623928546905518,
+      "end_time": 0.6636548042297363,
+      "duration": 0.0012619495391845703,
+      "metrics": {
+        "action_retrieve_relevant_chunks_total": 1,
+        "action_retrieve_relevant_chunks_seconds_avg": 0.0012619495391845703,
+        "action_retrieve_relevant_chunks_seconds_total": 0.0012619495391845703
+      }
+    },
+    {
+      "name": "action: generate_bot_message",
+      "span_id": "0ea89729-cd78-46ce-803f-dc490c3ec00d",
+      "parent_id": "67c3f833-8c0e-48b4-8182-2299727880d9",
+      "trace_id": "0e5f5a83-9ef5-4eb2-b622-9185ec30d75a",
+      "start_time": 0.6677687168121338,
+      "end_time": 0.6694657802581787,
+      "duration": 0.0016970634460449219,
+      "metrics": {
+        "action_generate_bot_message_total": 1,
+        "action_generate_bot_message_seconds_avg": 0.0016970634460449219,
+        "action_generate_bot_message_seconds_total": 0.0016970634460449219
+      }
+    }
+  ]
+}
+{
+  "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "df9fe376-a881-4a26-80b1-0a29a440ee22",
+      "parent_id": null,
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.0,
+      "end_time": 10.957941055297852,
+      "duration": 10.957941055297852,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 10.957941055297852,
+        "interaction_seconds_total": 10.957941055297852
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "8c0a63f1-8688-4afe-b4de-f528b1f9aecb",
+      "parent_id": "df9fe376-a881-4a26-80b1-0a29a440ee22",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.0,
+      "end_time": 0.020078182220458984,
+      "duration": 0.020078182220458984,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "8415d2b4-f02f-46f4-bbd0-c4ac466ed30a",
+      "parent_id": "8c0a63f1-8688-4afe-b4de-f528b1f9aecb",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.0016088485717773438,
+      "end_time": 0.017853975296020508,
+      "duration": 0.016245126724243164,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.016245126724243164,
+        "action_mask_sensitive_data_seconds_total": 0.016245126724243164
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "eb4f8112-ca8d-452b-a43f-7bb6563ddb09",
+      "parent_id": "df9fe376-a881-4a26-80b1-0a29a440ee22",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.021963119506835938,
+      "end_time": 0.5788888931274414,
+      "duration": 0.5569257736206055,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "008e19a5-5f4d-49a7-859e-88377cb05037",
+      "parent_id": "eb4f8112-ca8d-452b-a43f-7bb6563ddb09",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.022958993911743164,
+      "end_time": 0.573829174041748,
+      "duration": 0.5508701801300049,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.5508701801300049,
+        "action_content_safety_check_input_seconds_total": 0.5508701801300049
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "ce33bf74-300a-4103-acc2-a7fa5923abdb",
+      "parent_id": "008e19a5-5f4d-49a7-859e-88377cb05037",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.028525114059448242,
+      "end_time": 0.5696618556976318,
+      "duration": 0.5411367416381836,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.5411367416381836,
+        "llm_call_llama-guard3:8b_seconds_total": 0.5411367416381836,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 406,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 408
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "ed88e480-c7be-4690-bd27-9103efb38b67",
+      "parent_id": "df9fe376-a881-4a26-80b1-0a29a440ee22",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.582503080368042,
+      "end_time": 1.7328650951385498,
+      "duration": 1.1503620147705078,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "cb167860-7b02-43f0-9e46-af1952fd0337",
+      "parent_id": "ed88e480-c7be-4690-bd27-9103efb38b67",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.5848441123962402,
+      "end_time": 1.7272391319274902,
+      "duration": 1.14239501953125,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 1.14239501953125,
+        "action_self_check_input_seconds_total": 1.14239501953125
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "96407c98-4e51-4e30-93c9-92c85042fde8",
+      "parent_id": "cb167860-7b02-43f0-9e46-af1952fd0337",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 0.5911111831665039,
+      "end_time": 1.7226219177246094,
+      "duration": 1.1315107345581055,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 1.1315107345581055,
+        "llm_call_gpt-3.5-turbo_seconds_total": 1.1315107345581055,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 53,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 1,
+        "llm_call_gpt-3.5-turbo_tokens_total": 54
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "86e78aa9-6949-49c5-91c3-4fd5f2da8898",
+      "parent_id": "df9fe376-a881-4a26-80b1-0a29a440ee22",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 1.736828088760376,
+      "end_time": 8.41872501373291,
+      "duration": 6.681896924972534,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "c7c01b65-395c-402c-8ab1-fa3f6386edca",
+      "parent_id": "86e78aa9-6949-49c5-91c3-4fd5f2da8898",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 1.7392399311065674,
+      "end_time": 8.416917085647583,
+      "duration": 6.677677154541016,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 6.677677154541016,
+        "action_jailbreak_detection_heuristics_seconds_total": 6.677677154541016
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "9891db67-3811-4a4a-a268-8daa0565609d",
+      "parent_id": "df9fe376-a881-4a26-80b1-0a29a440ee22",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 8.421593189239502,
+      "end_time": 10.951565027236938,
+      "duration": 2.5299718379974365,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "d619b821-1a92-4d56-8cbe-a8cdca4dd36d",
+      "parent_id": "9891db67-3811-4a4a-a268-8daa0565609d",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 8.421595096588135,
+      "end_time": 10.93897795677185,
+      "duration": 2.517382860183716,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 2.517382860183716,
+        "action_generate_user_intent_seconds_total": 2.517382860183716
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "a8448af8-cd6a-4e47-8eae-7f29d68d7810",
+      "parent_id": "d619b821-1a92-4d56-8cbe-a8cdca4dd36d",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 8.424146890640259,
+      "end_time": 10.931297063827515,
+      "duration": 2.507150173187256,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 2.507150173187256,
+        "llm_call_gpt-3.5-turbo_seconds_total": 2.507150173187256,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 85,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 245,
+        "llm_call_gpt-3.5-turbo_tokens_total": 330
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "59a43c32-695f-42f4-8b8d-8c5b85e6dff6",
+      "parent_id": "df9fe376-a881-4a26-80b1-0a29a440ee22",
+      "trace_id": "6efb3d3d-cb0e-4131-b80b-b275464eaef9",
+      "start_time": 10.951565027236938,
+      "end_time": 10.957941055297852,
+      "duration": 0.006376028060913086,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "9cb58950-7a5f-4aba-9668-d98d15c8805c",
+      "parent_id": null,
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.0,
+      "end_time": 4.209619998931885,
+      "duration": 4.209619998931885,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 4.209619998931885,
+        "interaction_seconds_total": 4.209619998931885
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "2c3b9396-9f24-4b10-a44d-b58dfc6f697b",
+      "parent_id": "9cb58950-7a5f-4aba-9668-d98d15c8805c",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.0,
+      "end_time": 0.015501976013183594,
+      "duration": 0.015501976013183594,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "4e61464d-b012-40d8-9ead-6da9f1d5ff88",
+      "parent_id": "2c3b9396-9f24-4b10-a44d-b58dfc6f697b",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.0036301612854003906,
+      "end_time": 0.011539936065673828,
+      "duration": 0.007909774780273438,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.007909774780273438,
+        "action_mask_sensitive_data_seconds_total": 0.007909774780273438
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "7472474a-9936-4235-a991-c27b1a139207",
+      "parent_id": "9cb58950-7a5f-4aba-9668-d98d15c8805c",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.019190073013305664,
+      "end_time": 0.6493511199951172,
+      "duration": 0.6301610469818115,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "fdfc8d50-8682-4f1d-908f-4a7944582fea",
+      "parent_id": "7472474a-9936-4235-a991-c27b1a139207",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.021795034408569336,
+      "end_time": 0.6392931938171387,
+      "duration": 0.6174981594085693,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 0.6174981594085693,
+        "action_content_safety_check_input_seconds_total": 0.6174981594085693
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "c468e539-1fff-49aa-8a5f-8ff9e950f30a",
+      "parent_id": "fdfc8d50-8682-4f1d-908f-4a7944582fea",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.0268709659576416,
+      "end_time": 0.6346340179443359,
+      "duration": 0.6077630519866943,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 0.6077630519866943,
+        "llm_call_llama-guard3:8b_seconds_total": 0.6077630519866943,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 401,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 403
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "5d73302e-35f9-4658-afee-4e55429366bd",
+      "parent_id": "9cb58950-7a5f-4aba-9668-d98d15c8805c",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.656886100769043,
+      "end_time": 1.6222801208496094,
+      "duration": 0.9653940200805664,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "bb32f922-06d0-449f-9c4b-b6eb9140b7dc",
+      "parent_id": "5d73302e-35f9-4658-afee-4e55429366bd",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.661139965057373,
+      "end_time": 1.613863229751587,
+      "duration": 0.9527232646942139,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 0.9527232646942139,
+        "action_self_check_input_seconds_total": 0.9527232646942139
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "47f5ace4-e6d2-4377-bc38-8c2e323a6d48",
+      "parent_id": "bb32f922-06d0-449f-9c4b-b6eb9140b7dc",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 0.6652281284332275,
+      "end_time": 1.609093189239502,
+      "duration": 0.9438650608062744,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.9438650608062744,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.9438650608062744,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 48,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 1,
+        "llm_call_gpt-3.5-turbo_tokens_total": 49
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "2eb4014b-9a9c-4c03-813e-da243f214224",
+      "parent_id": "9cb58950-7a5f-4aba-9668-d98d15c8805c",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 1.6287190914154053,
+      "end_time": 1.7832739353179932,
+      "duration": 0.1545548439025879,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "a01a3736-d8a3-44b7-9bc6-164067315468",
+      "parent_id": "2eb4014b-9a9c-4c03-813e-da243f214224",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 1.6328701972961426,
+      "end_time": 1.7808151245117188,
+      "duration": 0.14794492721557617,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 0.14794492721557617,
+        "action_jailbreak_detection_heuristics_seconds_total": 0.14794492721557617
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "285398de-ef61-4b87-a271-82e6adda59e1",
+      "parent_id": "9cb58950-7a5f-4aba-9668-d98d15c8805c",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 1.788560152053833,
+      "end_time": 4.204133033752441,
+      "duration": 2.4155728816986084,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "569837fa-3f0d-40c9-8c01-641a61e65fcc",
+      "parent_id": "285398de-ef61-4b87-a271-82e6adda59e1",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 1.7885632514953613,
+      "end_time": 4.189779281616211,
+      "duration": 2.4012160301208496,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 2.4012160301208496,
+        "action_generate_user_intent_seconds_total": 2.4012160301208496
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "0bd3cb38-cd8c-498a-a55a-b375ec9aed2c",
+      "parent_id": "569837fa-3f0d-40c9-8c01-641a61e65fcc",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 1.7925329208374023,
+      "end_time": 4.181646108627319,
+      "duration": 2.389113187789917,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 2.389113187789917,
+        "llm_call_gpt-3.5-turbo_seconds_total": 2.389113187789917,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 344,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 282,
+        "llm_call_gpt-3.5-turbo_tokens_total": 626
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "428cb649-6870-4a7e-825a-0643bdf89c18",
+      "parent_id": "9cb58950-7a5f-4aba-9668-d98d15c8805c",
+      "trace_id": "7de9a617-cdfc-49e7-9539-92750044857c",
+      "start_time": 4.204133033752441,
+      "end_time": 4.209619998931885,
+      "duration": 0.005486965179443359,
+      "metrics": {}
+    }
+  ]
+}
+{
+  "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+  "spans": [
+    {
+      "name": "interaction",
+      "span_id": "988ea782-dd40-4687-9da6-e9d9652faee7",
+      "parent_id": null,
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 0.0,
+      "end_time": 11.008321762084961,
+      "duration": 11.008321762084961,
+      "metrics": {
+        "interaction_total": 1,
+        "interaction_seconds_avg": 11.008321762084961,
+        "interaction_seconds_total": 11.008321762084961
+      }
+    },
+    {
+      "name": "rail: mask sensitive data on input",
+      "span_id": "71e78151-12b6-45b9-800c-4f48ea1fe6ae",
+      "parent_id": "988ea782-dd40-4687-9da6-e9d9652faee7",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 0.0,
+      "end_time": 0.022949934005737305,
+      "duration": 0.022949934005737305,
+      "metrics": {}
+    },
+    {
+      "name": "action: mask_sensitive_data",
+      "span_id": "1b376e82-d166-47da-8720-ea69e8f181c1",
+      "parent_id": "71e78151-12b6-45b9-800c-4f48ea1fe6ae",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 0.001344919204711914,
+      "end_time": 0.02080082893371582,
+      "duration": 0.019455909729003906,
+      "metrics": {
+        "action_mask_sensitive_data_total": 1,
+        "action_mask_sensitive_data_seconds_avg": 0.019455909729003906,
+        "action_mask_sensitive_data_seconds_total": 0.019455909729003906
+      }
+    },
+    {
+      "name": "rail: content safety check input $model=llama_guard",
+      "span_id": "d3ca1af7-723c-49fc-9725-f56903199984",
+      "parent_id": "988ea782-dd40-4687-9da6-e9d9652faee7",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 0.02438211441040039,
+      "end_time": 4.50914192199707,
+      "duration": 4.48475980758667,
+      "metrics": {}
+    },
+    {
+      "name": "action: content_safety_check_input",
+      "span_id": "e8a31c22-3f52-4b14-ba16-ced39029951f",
+      "parent_id": "d3ca1af7-723c-49fc-9725-f56903199984",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 0.025334835052490234,
+      "end_time": 4.506283760070801,
+      "duration": 4.4809489250183105,
+      "metrics": {
+        "action_content_safety_check_input_total": 1,
+        "action_content_safety_check_input_seconds_avg": 4.4809489250183105,
+        "action_content_safety_check_input_seconds_total": 4.4809489250183105
+      }
+    },
+    {
+      "name": "LLM: llama-guard3:8b",
+      "span_id": "668ebab2-d948-462e-9587-312b7a40069d",
+      "parent_id": "e8a31c22-3f52-4b14-ba16-ced39029951f",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 0.03407907485961914,
+      "end_time": 4.503138780593872,
+      "duration": 4.469059705734253,
+      "metrics": {
+        "llm_call_llama-guard3:8b_total": 1,
+        "llm_call_llama-guard3:8b_seconds_avg": 4.469059705734253,
+        "llm_call_llama-guard3:8b_seconds_total": 4.469059705734253,
+        "llm_call_llama-guard3:8b_prompt_tokens_total": 402,
+        "llm_call_llama-guard3:8b_completion_tokens_total": 2,
+        "llm_call_llama-guard3:8b_tokens_total": 404
+      }
+    },
+    {
+      "name": "rail: self check input",
+      "span_id": "8a2829dd-519d-4582-a44a-053fb5effbd1",
+      "parent_id": "988ea782-dd40-4687-9da6-e9d9652faee7",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 4.5111119747161865,
+      "end_time": 5.3435609340667725,
+      "duration": 0.8324489593505859,
+      "metrics": {}
+    },
+    {
+      "name": "action: self_check_input",
+      "span_id": "14777e24-c3f1-4007-9b41-b4fe3cbc4ce1",
+      "parent_id": "8a2829dd-519d-4582-a44a-053fb5effbd1",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 4.512399911880493,
+      "end_time": 5.340137958526611,
+      "duration": 0.8277380466461182,
+      "metrics": {
+        "action_self_check_input_total": 1,
+        "action_self_check_input_seconds_avg": 0.8277380466461182,
+        "action_self_check_input_seconds_total": 0.8277380466461182
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "dae5f155-532a-468a-9aa8-a01708e107c4",
+      "parent_id": "14777e24-c3f1-4007-9b41-b4fe3cbc4ce1",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 4.515650987625122,
+      "end_time": 5.3378918170928955,
+      "duration": 0.8222408294677734,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 0.8222408294677734,
+        "llm_call_gpt-3.5-turbo_seconds_total": 0.8222408294677734,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 50,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 1,
+        "llm_call_gpt-3.5-turbo_tokens_total": 51
+      }
+    },
+    {
+      "name": "rail: jailbreak detection heuristics",
+      "span_id": "fcd0b75a-c452-4ac7-979c-7baa6e2089d9",
+      "parent_id": "988ea782-dd40-4687-9da6-e9d9652faee7",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 5.346090793609619,
+      "end_time": 9.071982860565186,
+      "duration": 3.7258920669555664,
+      "metrics": {}
+    },
+    {
+      "name": "action: jailbreak_detection_heuristics",
+      "span_id": "15435fb7-c2b8-485a-a922-135e512b9349",
+      "parent_id": "fcd0b75a-c452-4ac7-979c-7baa6e2089d9",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 5.347695827484131,
+      "end_time": 9.070301055908203,
+      "duration": 3.7226052284240723,
+      "metrics": {
+        "action_jailbreak_detection_heuristics_total": 1,
+        "action_jailbreak_detection_heuristics_seconds_avg": 3.7226052284240723,
+        "action_jailbreak_detection_heuristics_seconds_total": 3.7226052284240723
+      }
+    },
+    {
+      "name": "rail: generate user intent",
+      "span_id": "34dc36e7-978e-4cbe-b1ca-879f755bfd6f",
+      "parent_id": "988ea782-dd40-4687-9da6-e9d9652faee7",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 9.07518196105957,
+      "end_time": 11.005022048950195,
+      "duration": 1.929840087890625,
+      "metrics": {}
+    },
+    {
+      "name": "action: generate_user_intent",
+      "span_id": "7c17efeb-50be-4230-a005-4f7721bbe6f5",
+      "parent_id": "34dc36e7-978e-4cbe-b1ca-879f755bfd6f",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 9.075183868408203,
+      "end_time": 10.997905969619751,
+      "duration": 1.9227221012115479,
+      "metrics": {
+        "action_generate_user_intent_total": 1,
+        "action_generate_user_intent_seconds_avg": 1.9227221012115479,
+        "action_generate_user_intent_seconds_total": 1.9227221012115479
+      }
+    },
+    {
+      "name": "LLM: gpt-3.5-turbo",
+      "span_id": "fe4e6866-df25-4a4b-b1b1-bde79f7dfc1f",
+      "parent_id": "7c17efeb-50be-4230-a005-4f7721bbe6f5",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 9.077883005142212,
+      "end_time": 10.994642972946167,
+      "duration": 1.916759967803955,
+      "metrics": {
+        "llm_call_gpt-3.5-turbo_total": 1,
+        "llm_call_gpt-3.5-turbo_seconds_avg": 1.916759967803955,
+        "llm_call_gpt-3.5-turbo_seconds_total": 1.916759967803955,
+        "llm_call_gpt-3.5-turbo_prompt_tokens_total": 81,
+        "llm_call_gpt-3.5-turbo_completion_tokens_total": 50,
+        "llm_call_gpt-3.5-turbo_tokens_total": 131
+      }
+    },
+    {
+      "name": "rail: self check hallucination",
+      "span_id": "b9526835-679d-4003-a7e6-4b27d9ae51fd",
+      "parent_id": "988ea782-dd40-4687-9da6-e9d9652faee7",
+      "trace_id": "14ca9a83-de0b-4b8f-b50f-f5b62e92ee1c",
+      "start_time": 11.005022048950195,
+      "end_time": 11.008321762084961,
+      "duration": 0.003299713134765625,
+      "metrics": {}
+    }
+  ]
+}

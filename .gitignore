@@ -10,3 +10,6 @@ wheels/
 .venv
 
 .env
+
+src/examples/multimodal/images/gun.jpg
+

@@ -31,9 +31,9 @@ rails:
   config:
     sensitive_data_detection:            # Presidio tuning
       input:
-        entities: [EMAIL_ADDRESS, PERSON]
+        entities: [CREDIT_CARD, CRYPTO, EMAIL_ADDRESS, IBAN_CODE, PHONE_NUMBER, MEDICAL_LICENSE, UK_NHS, UK_NINO, US_BANK_NUMBER, US_DRIVER_LICENSE, US_PASSPORT, US_SSN]
       output:
-        entities: [PERSON]
+        entities: [CREDIT_CARD, CRYPTO, EMAIL_ADDRESS, IBAN_CODE, PHONE_NUMBER, MEDICAL_LICENSE, UK_NHS, UK_NINO, US_BANK_NUMBER, US_DRIVER_LICENSE, US_PASSPORT, US_SSN]
     jailbreak_detection:
       #server_endpoint: "http://0.0.0.0:1337/heuristics"
       length_per_perplexity_threshold: 89.79
